@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../css/acc.css">
+    <link rel="icon" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>    <!-- Header / Navigation Bar -->
+    <header class="navbar">
+        <div class="brand">
+            <img src="../images/logo.png" alt="Campus Market Logo" class="logo">
+            <h1>CampusMarket</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="register-box">
+            <h1> Create Your Account </h1>
+            <h3> Join the CampusMarket community </h3>
+
+            <!-- Name -->
+            <div class="register-input">
+                <input type="text" name="full_name" required>
+                <label class="create-label">Full Name</label>
+            </div>
+
+            <!-- Email -->
+            <div class="register-input">
+                <input type="email" name="email" required>
+                <label class="create-label">Email Address</label>
+            </div>
+
+            <!-- Password -->
+            <div class="register-input">
+                <input type="password" name="password" id="passwordInput" required>
+                <label class="create-label">Password</label>
+                <i class="bx bx-hide toggle-password" id="togglePassword"></i>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="register-input">
+                <input type="password" name="confirm_password" id="confirmPassword" required>
+                <label class="create-label">Confirm your Password</label>
+                <i class="bx bx-hide toggle-password" id="toggleConfirmPassword"></i>
+            </div>
+
+            <!-- Choose Province -->
+            <div class="input-box select-box">
+                <select id="province" name="province" required>
+                    <option value="" disabled selected>Choose your Province</option>
+                    <option value="batangas">Batangas</option>
+                    <option value="cavite">Cavite</option>
+                    <option value="laguna">Laguna</option>
+                    <option value="quezon">Quezon</option>
+                    <option value="rizal">Rizal</option>
+                </select>
+
+                <i class="bx bx-chevron-down select-arrow"></i>
+            </div>
+            
+            <!-- choose School --> 
+            <div class="input-box select-box">
+                <select id="school" name="school" required>
+                    <option value="" disabled selected>Choose your School</option>
+                </select>
+
+                <i class="bx bx-chevron-down select-arrow"></i>
+            </div>
+
+            <!-- Student Id -->
+            <div class="register-input">
+                <input type="student-id" name="Student-id" id="student-id" required>
+                <label class="create-label">Enter your student ID</label>
+            </div>
+            <button type="submit" class="btn">Create Account</button>
+            <div class="login">
+                <p>Already have an account?<a href="login.html" class="btn-login">  Log in</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const passwordInput = document.querySelector('#passwordInput');
+        const togglePassword = document.querySelector('#togglePassword');
+
+        const confirmPassword = document.querySelector('#confirmPassword');
+        const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
+
+
+        // Password
+        togglePassword.addEventListener('click', function () {
+            const isPassword = passwordInput.type === 'password';
+
+            passwordInput.type = isPassword ? 'text' : 'password';
+
+            this.classList.toggle('bx-show', isPassword);
+            this.classList.toggle('bx-hide', !isPassword);
+        });
+
+
+        // Confirm Password
+        toggleConfirmPassword.addEventListener('click', function () {
+            const isPassword = confirmPassword.type === 'password';
+
+            confirmPassword.type = isPassword ? 'text' : 'password';
+
+            this.classList.toggle('bx-show', isPassword);
+            this.classList.toggle('bx-hide', !isPassword);
+        });
+
+    </script>
+</body>
+</html>

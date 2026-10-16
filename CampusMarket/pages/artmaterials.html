@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Market | Art Materials</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/all-products.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="navbar">
+        <div class="brand">
+            <div class="brand-left">
+                <img src="../images/logo.png" alt="Campus Market Logo" class="logo">
+                <h1>CampusMarket</h1>   
+            </div>
+            <div class="header-actions">
+                <div class="search-box2">
+                    <input type="text" placeholder="Search for products, categories, or keywords...">
+                    <button class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="cart-account">
+                    <button class="cart" onclick="window.location.href='carts.html'">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cartCount" class="cart-badge">0</span>
+                    </button>
+                    <button class="account">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <section class="cart-section">
+            <a href="products.html" class="continue-shopping">
+                <i class='bx bx-left-arrow-alt'></i>
+                Continue Shopping
+            </a>
+
+            <div class="product-header">
+                <h2 id="number-products">
+                    2 Products
+                </h2>
+
+                <h1 class="title">ART MATERIALS</h1>
+
+                <div class="filter-container">
+                    <div class="view-controls">
+                        <select id="sort">
+                            <option value="default">
+                                by: Featured
+                            </option>
+
+                            <option value="low">
+                                Price Low to High
+                            </option>
+
+                            <option value="high">
+                                Price High to Low
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="condition-dropdown">
+                        <details class="condition-details">
+                            <summary class="condition-btn">
+                                <i class="fa-solid fa-sliders"></i>
+                                <span>Condition</span>
+                                <i class="fa-solid fa-chevron-down arrow"></i>
+                            </summary>
+
+                            <div class="condition-menu">
+                                <div class="condition-item">All</div>
+                                <div class="condition-item">New</div>
+                                <div class="condition-item">Like New</div>
+                                <div class="condition-item">Good</div>
+                                <div class="condition-item">Fair</div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid">
+
+                <!-- water color -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge new">
+                            New
+                        </span>
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img src="../images/paint.jpg" alt="Watercolor Set">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Watercolor Set</h3>
+                        <p class="category">Art Materials</p>
+                        <h2>₱180</h2>
+                        <button>View Details</button>
+                    </div>
+                </div>
+
+                <!-- Sketch pad -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="badge new">
+                            New
+                        </span>
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img src="../images/sketchpad.jpg" alt="sketch pad">
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Sketch pad</h3>
+                        <p class="category">Art Materials</p>
+                        <h2>₱120</h2>
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../js/all-products.js"></script>
+</body>
+</html>

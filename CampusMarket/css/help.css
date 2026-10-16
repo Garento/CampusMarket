@@ -1,0 +1,632 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+
+body{
+    background:#ffffff;
+    color:#334155;
+    line-height:1.5;
+    overflow-x:hidden;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+button{
+    cursor:pointer;
+}
+
+
+/* ================= HEADER ================= */
+
+
+.navbar{
+
+    display:flex;
+    align-items:center;
+    height:80px;
+    width:100%;
+
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(8px);
+
+    box-shadow:0 1px 3px rgba(0,0,0,.05);
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    z-index:100;
+
+}
+
+
+.brand{
+
+    display:flex;
+    align-items:center;
+
+}
+
+
+.brand-left{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-left:72px;
+
+}
+
+
+.brand .logo{
+
+    height:38px;
+    width:auto;
+
+}
+
+
+.brand h1{
+
+    font-size:1.35rem;
+    font-weight:800;
+    color:#29517e;
+
+}
+
+
+
+.header-actions{
+
+    display:flex;
+    align-items:center;
+
+    margin-left:auto;
+    margin-right:70px;
+
+    gap:25px;
+
+}
+
+
+
+/* SEARCH */
+
+
+.search-box2{
+
+    width:600px;
+    height:54px;
+
+    display:flex;
+    align-items:center;
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:6px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.search-box2 input{
+
+    flex:1;
+
+    border:none;
+    outline:none;
+
+    padding:10px 16px;
+
+    font-size:14px;
+
+}
+
+
+
+.search-button{
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    background:none;
+
+    color:#1e293b;
+
+}
+
+
+
+/* ICONS */
+
+
+.cart-account{
+
+    display:flex;
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+
+.cart,
+.account{
+
+    width:40px;
+    height:40px;
+
+    border:none;
+    background:none;
+
+    border-radius:50%;
+
+    font-size:20px;
+
+    color:#29517e;
+
+}
+
+
+
+.cart:hover,
+.account:hover{
+
+    background:#f5f4f4;
+
+}
+
+
+
+.cart{
+
+    position:relative;
+
+}
+
+
+
+.cart-badge{
+
+    position:absolute;
+
+    top:0;
+    right:0;
+
+    min-width:18px;
+    height:18px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:11px;
+    font-weight:700;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+}
+
+
+
+/* ================= CONTENT ================= */
+
+
+.container{
+
+    width:85%;
+
+    margin:auto;
+
+    padding-top:120px;
+
+}
+
+
+
+/* ================= HERO ================= */
+
+
+.hero{
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #eff6ff,
+        #dbeafe
+    );
+
+
+    border-radius:25px;
+
+
+    padding:40px;
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+}
+
+
+
+.hero h1{
+
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:#1e3a8a;
+
+
+}
+
+
+
+.hero p{
+
+
+    margin-top:12px;
+
+    max-width:520px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+
+}
+
+
+
+.hero-icon{
+
+    font-size:90px;
+
+}
+
+
+
+/* ================= TITLE ================= */
+
+
+.title{
+
+
+    margin-top:45px;
+
+    margin-bottom:25px;
+
+    color:#1e3a8a;
+
+    font-size:26px;
+
+    font-weight:800;
+
+
+}
+
+
+
+/* ================= HELP CARDS ================= */
+
+
+.help-grid{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+.help-box{
+
+
+    background:white;
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    border:1px solid #e2e8f0;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,.06);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.help-box:hover{
+
+
+    transform:translateY(-7px);
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.12);
+
+
+}
+
+
+
+.help-box i{
+
+
+    font-size:42px;
+
+    color:#2563eb;
+
+
+}
+
+
+
+.help-box h3{
+
+
+    margin-top:15px;
+
+    margin-bottom:10px;
+
+
+    color:#1e3a8a;
+
+    font-size:18px;
+
+
+}
+
+
+
+.help-box p{
+
+
+    color:#64748b;
+
+    font-size:14px;
+
+
+}
+
+
+
+/* ================= CONTACT ================= */
+
+
+.contact{
+
+    margin-top:60px;
+
+}
+
+
+
+.contact h2{
+
+    color:#1e3a8a;
+
+    font-size:28px;
+
+}
+
+
+
+.contact > p{
+
+    color:#64748b;
+
+    margin-top:5px;
+
+}
+
+
+
+.contact-card{
+
+
+    margin-top:25px;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    padding:25px;
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    gap:20px;
+
+
+    border:1px solid #e2e8f0;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,.06);
+
+
+}
+
+
+
+.contact-card i{
+
+
+    font-size:45px;
+
+    color:#2563eb;
+
+
+}
+
+
+
+.contact-card h3{
+
+    color:#1e3a8a;
+
+}
+
+
+
+.contact-card p{
+
+    color:#64748b;
+
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+
+@media(max-width:1200px){
+
+
+    .search-box2{
+
+        width:450px;
+
+    }
+
+
+
+    .help-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+
+@media(max-width:800px){
+
+
+    .brand-left{
+
+        margin-left:20px;
+
+    }
+
+
+
+    .brand h1{
+
+        display:none;
+
+    }
+
+
+
+    .search-box2{
+
+        display:none;
+
+    }
+
+
+
+    .header-actions{
+
+        margin-right:20px;
+
+    }
+
+
+
+    .container{
+
+        width:90%;
+
+    }
+
+
+
+    .help-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+
+    .hero-icon{
+
+        margin-top:20px;
+
+    }
+
+
+}

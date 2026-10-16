@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Market | Products</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/products.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation Bar -->
+    <section class="page" id="page1">
+        <header class="navbar">
+            <div class="brand">
+                <div class="brand-left">
+                        <!-- FILTER TOGGLE -->
+                    <button class="filter-toggle" id="filterToggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <img src="../images/logo.png" alt="Campus Market Logo" class="logo">
+                    <h1>CampusMarket</h1>   
+                </div>
+                <div class="header-actions">
+                    <div class="search-box2">
+                        <input type="text" placeholder="Search for products, categories, or keywords...">
+                        <button class="search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="cart-account">
+                        <button class="cart" onclick="window.location.href='carts.html'">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cartCount" class="cart-badge"></span>
+                        </button>
+                        <button class="account" onclick="window.location.href='../pages/user.html'">
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <aside>
+            <!-- CHOICES -->
+        <div class="choices" id="choices"> 
+            <h1 class="categories">Categories
+            </h1>
+            <button class="page active" data-page="products-page1" onclick="goToPage('products-page1')">
+                <h2 class="all-products">
+                    <i class="fa-solid fa-square-plus icon"></i>
+                    <span>All</span>
+                </h2>
+            </button>  
+            <button class="page" data-page="products-page2" onclick="goToPage('products-page2')">
+                <h2 class="books">
+                    <i class="fa-solid fa-book-open icon"></i>
+                    <span>Books</span>
+                </h2>
+            </button>   
+            <button class="page" data-page="products-page3" onclick="goToPage('products-page3')">
+                <h2 class="school-supplies">
+                    <i class="fa-solid fa-pen icon"></i>
+                    <span>School Supplies</span>
+                </h2>
+            </button>   
+            <button class="page" data-page="products-page4" onclick="goToPage('products-page4')">
+                <h2 class="calculators">
+                    <i class="fa-solid fa-calculator icon"></i>
+                    <span>Calculators</span>
+                </h2>
+            </button>   
+            <button class="page" data-page="products-page5" onclick="goToPage('products-page5')">
+                <h2 class="bags"> 
+                    <i class="fa-solid fa-bag-shopping icon"></i>
+                    <span>Bags</span>
+                </h2>
+            </button> 
+            <button class="page" data-page="products-page6" onclick="goToPage('products-page6')">
+                <h2 class="art-materials">
+                    <i class="fa-solid fa-palette icon"></i>
+                    <span>Art Materials</span>
+                </h2>
+            </button>   
+            <button class="page" data-page="products-page7" onclick="goToPage('products-page7')">
+                <h2 class="others">
+                    <i class="fa-solid fa-ellipsis icon"></i>
+                    <span>Others</span>
+                </h2> 
+            </button> 
+            
+            <hr>
+
+            <!-- STUDENT DEALS CARD -->
+            <div class="student-deals">
+                <div class="deal-icon">
+                    🎓
+                </div>
+
+                <h3>Student Deals</h3>
+
+                <p>
+                    Save more on
+                    school essentials!
+                </p>
+
+                <div class="discount">
+                    Up to 10% OFF
+                </div>
+
+                <small>
+                    💡 Study smarter, spend less!
+                </small>
+            </div>
+
+            <!-- HELP CARD -->
+            <div class="help-card" onclick="window.location.href='../pages/help.html'">
+                <div class="help-icon">
+                    🎧
+                </div>
+
+                <div>
+                    <h4>Need Help?</h4>
+                    <p>We're here for you!</p>
+                </div>
+
+                <span>
+                    <!-- 
+                    →
+                     -->
+                </span>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- PAGE 1 ALL -->
+        <section id="products-page1" class="product-section">
+            <div class="products-header">
+                <h1>All Products</h1>
+            </div>
+
+            <!-- PRODUCTS -->
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="../images/calculator.jpg" alt="Scientific Calculator">
+                    <h2>Scientific Calculator</h2>
+                    <h3>₱500</h3>
+                    <p>Used - Good</p>
+                    <button onclick="window.location.href='../calculators/scical.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/notebook.jpg" alt="Notebook">
+                    <h2>Notebook</h2>
+                    <h3>₱50</h3>
+                    <p>New</p>
+                    <button onclick="window.location.href='../schoolsupplies/notebook.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/textbook.jpg" alt="Textbook">
+                    <h2>Textbook (Discrete Math)</h2>
+                    <h3>₱200</h3>
+                    <p>Used - Good</p>
+                    <button onclick="window.location.href='../books/dm.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/laptopbag.jpg" alt="Laptop Bag">
+                    <h2>Laptop Bag</h2>
+                    <h3>₱800</h3>
+                    <p>Used - Like New</p>
+                    <button onclick="window.location.href='../bags/laptopbag.html'">View Details</button>
+                </div>
+            </div>
+            <div class="all-products">
+                <a href="../pages/all-products.html" class="primary-button">
+                    View All Products
+                </a>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 2 BOOKS -->
+        <section id="products-page2" class="product-section">
+            <div class="products-header">
+                <h1>Books</h1>
+            </div>
+
+                <!-- PRODUCTS -->
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="../images/softwarebook.jpg" alt="Software Book">
+                    <h2>Software Book</h2>
+                    <h3>₱300</h3>
+                    <p>Used - Good</p>
+                    <button onclick="window.location.href='../books/softwarebook.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/psychbook.jpg" alt="Psych Book">
+                    <h2>The Laws of Human Nature</h2>
+                    <h3>₱350</h3>
+                    <p>Used - Good</p>
+                    <button onclick="window.location.href='../books/psychbook.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/eebook.jpg" alt="Textbook">
+                    <h2>Electrical Engineering</h2>
+                    <h3>₱300</h3>
+                    <p>Used - Good</p>
+                    <button onclick="window.location.href='../books/eebook.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/bpabook.jpg" alt="Business Plan Book">
+                    <h2>Public Administration book</h2>
+                    <h3>₱320</h3>
+                    <p>Used - Like New</p>
+                    <button onclick="window.location.href='../books/bpabook.html'">View Details</button>
+                </div>
+            </div>
+            <div class="all-products">
+                <a href="../pages/books.html" class="primary-button">
+                    View All Products
+                </a>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 3 SCHOOL SUPPLIES -->
+        <section id="products-page3" class="product-section" data-category="school supplies">
+            <div class="products-header">
+                <h1>School Supplies</h1>
+            </div>
+
+            <div class="product-grid" id="grid-page3">
+                <div class="product-card">
+                    <img src="../images/notebookset.jpg" alt="Business Plan Book">
+                    <h2>Notebook Set</h2>
+                    <h3>₱250</h3>
+                    <p>New</p>
+                    <button onclick="window.location.href='../schoolsupplies/notebookset.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/pen.jpg" alt="Ballpen Pack">
+                    <h2>Ballpen Pack</h2>
+                    <h3>₱50</h3>
+                    <p>New</p>
+                    <button onclick="window.location.href='../schoolsupplies/pen.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/yellowpad.jpg" alt="Yellow Pad">
+                    <h2>Yellow Pad</h2>
+                    <h3>₱35</h3>
+                    <p>New</p>
+                    <button onclick="window.location.href='../schoolsupplies/yellowpad.html'">View Details</button>
+                </div>
+            </div>
+            <div class="all-products">
+                <a href="../pages/school-supplies.html" class="primary-button">
+                    View All Products
+                </a>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 4 CALCULATORS -->
+        <section id="products-page4" class="product-section" data-category="calculators">
+            <div class="products-header">
+                <h1>Calculators</h1>
+            </div>
+
+            <div class="product-grid" id="grid-page4">
+
+                <div class="product-card">
+                    <img src="../images/calculator1.jpg" alt="Casio FX-991ES">
+                    <h2>Casio FX-991ES</h2>
+                    <h3>₱750</h3>
+                    <p>Used - Good</p>
+                    <button onclick="window.location.href='../all/scical.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/calculator2.jpg" alt="Canon Calculator">
+                    <h2>Canon Calculator</h2>
+                    <h3>₱250</h3>
+                    <p>Used - Like New</p>
+                    <button>View Details</button>
+                </div>
+            </div>
+            <div class="all-products">
+                <a href="../pages/calculators.html" class="primary-button">
+                    View All Products
+                </a>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 5 BAGS -->
+        <section id="products-page5" class="product-section">
+            <div class="products-header">
+                <h1>Bags</h1>
+                </div>
+                
+                <div class="product-grid" id="grid-page5">
+                    <div class="product-card">
+                        <img src="../images/hawkbag.jpg" alt="Hawk Backpack">
+                        <h2>Hawk Backpack</h2>
+                        <h3>₱650</h3>
+                        <p>Used - Like New</p>
+                        <button>View Details</button>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="../images/laptopbag.jpg" alt="Laptop Bag">
+                        <h2>Laptop Bag</h2>
+                        <h3>₱800</h3>
+                        <p>Used - Like New</p>
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="all-products">
+                <a href="../pages/bags.html" class="primary-button">
+                    View All Products
+                </a>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 6 ART MATERIALS -->
+        <section id="products-page6" class="product-section" data-category="art materials">
+            <div class="products-header">
+                <h1>Art Materials</h1>
+            </div>
+
+            <div class="product-grid" id="grid-page6">
+
+                <div class="product-card">
+                    <img src="../images/paint.jpg" alt="Watercolor Set">
+                    <h2>Watercolor Set</h2>
+                    <h3>₱180</h3>
+                    <p>New</p>
+                    <button onclick="window.location.href='../artmaterials/watercolorset.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/sketchpad.jpg" alt="Sketch Pad">
+                    <h2>Sketch Pad</h2>
+                    <h3>₱120</h3>
+                    <p>New</p>
+                    <button onclick="window.location.href='../artmaterials/sketchpad.html'">View Details</button>
+                </div>
+            </div>
+            <div class="all-products">
+                <a href="../pages/artmaterials.html" class="primary-button">
+                    View All Products
+                </a>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 7 OTHERS -->
+        <section id="products-page7" class="product-section" data-category="others">
+
+            <div class="products-header">
+                <h1>Others</h1>
+            </div>
+
+            <div class="product-grid" id="grid-page7">
+
+                <div class="product-card">
+                    <img src="../images/usb.jpg" alt="Flash Drive 32GB">
+                    <h2>Flash Drive 32GB</h2>
+                    <h3>₱250</h3>
+                    <p>Used - Like New</p>
+                    <button onclick="window.location.href='../others/flash-drive.html'">View Details</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../images/powerbank.jpg" alt="Power Bank">
+                    <h2>Power Bank</h2>
+                    <h3>₱500</h3>
+                    <p>Used - Good</p>
+                    <button onclick="window.location.href='../others/powerbank.html'">View Details</button>
+                </div>
+            </div>
+            <div class="all-products">
+                <a href="../pages/others.html" class="primary-button">
+                    View All Products
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/products.js"></script>
+</body>
+</html>

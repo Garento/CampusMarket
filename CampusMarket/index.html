@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Market</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+</head>
+<body>
+    <!-- Header / Navigation Bar -->
+    <section class="page" id="page1">
+        <header class="navbar">
+            <div class="brand">
+                <img src="images/logo.png" alt="Campus Market Logo" class="logo">
+                <h1>CampusMarket</h1>
+            </div>
+            <nav class="nav-buttons">
+                <button class="nav-link active" onclick="goToPage('page1')">Home</button>
+                <button class="nav-link" onclick="goToPage('page2')">Features</button>
+                <button class="nav-link" onclick="goToPage('page3')">About</button>
+            </nav>
+            <div class="accounts">
+                <a href="pages/login.html" class="btn-login">Log in</a>
+                <a href="pages/createacc.html" class="btn-createacc">Create Account</a>
+            </div>
+        </header>
+
+        <!-- Main Hero Banner -->
+        <main class="content">
+            <div class="hero-image">
+                <img src="images/campus.png">
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-label">
+                        <span></span>
+                        BUY • SELL • TRADE
+                    </div>
+                    <h1>CampusMarket</h1>
+                    <h2>Your Campus Marketplace</h2>
+                    <p>Buy, sell and trade school supplies, textbooks, and more — all from fellow <br>students in your campus. Safe, easy, and made for students, by student.</p>
+                    <div class="hero-buttons">
+                        <a class="btn-browse" href="pages/products.html">Browse Marketplace
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a class="btn-learn" href="#page3">Learn More</a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div class="hero-feature-content">
+                                <h3>Safe & Trusted</h3>
+                                <p>Verified student accounts and <br> secure transactions.</p>
+                            </div>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="hero-feature-content">
+                                <h3>Student to Student</h3>
+                                <p>Connect with fellow students<br> in your campus.</p>
+                            </div>
+                        </div>
+                        <div class="hero-feature">
+                            <div class="hero-feature-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="hero-feature-content">
+                                <h3>School-Based</h3>
+                                <p>Support your school community.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="page" id="page2">
+        <div class="section-heading">
+            <div class="section-label">
+                <span></span>
+                    FEATURES
+                <span></span>
+            </div>
+            <h2>
+                Why Choose CampusMarket?
+            </h2>
+            <p>
+                Everything you need for a better campus experience.
+                Designed to make buying, selling, and connecting
+                easier, safer, and more convenient.
+            </p>
+        </div>
+        <div class="feature">
+            <!-- FEATURE 1 -->
+            <article class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+                <h3>School-Based Marketplace</h3>
+                <p>
+                    Exclusive marketplace for your school community.
+                </p>
+                <div class="feature-image">
+                    <img src="images/campus.png">
+                </div>
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Your School
+                </span>
+            </article>
+
+            <!-- FEATURE 2 -->
+            <article class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3>Student to Student Transactions</h3>
+                <p>
+                    Directly connect with other students.
+                    No middlemen, no extra fees — just
+                    simple and reliable transactions.
+                </p>
+                <div class="feature-image">
+                    <img src="images/student.png" alt="Students trading">
+                    </div>
+            </article>
+            
+            <!-- FEATURE 3 -->
+            <article class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Safe & Trusted Community</h3>
+                <p>
+                    Verified student accounts, secure
+                    messaging, and built-in protection
+                    for a safer trading experience.
+                </p>
+                <div class="feature-image verified-demo">
+                    <div class="verfied-check">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="verified-info">
+                        <strong>
+                            Verified Student
+                        </strong>
+                        <span>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Account Verified
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- FEATURE 4 -->
+            <article class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3>Easy Product Search</h3>
+                <p>
+                    Find what you need faster.
+                    Use smart search and filters to browse
+                    thousands of items.
+                </p>
+                <div class="search-demo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>
+                        Search for products, categories...
+                    </span>
+                    <button>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="category-pill">
+                    <span>Books</span>
+                    <span>Supplies</span>
+                    <span>More</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- =========================
+     PAGE 3 - ABOUT
+========================= -->
+    <section class="page" id="page3">
+
+        <div class="about-container">
+
+            <div class="about-heading">
+                <div class="about-label">
+                    <span></span>
+                    ABOUT US
+                </div>
+
+                <h2>Building a Stronger<br>Campus Community</h2>
+
+                <h3>Buy • Sell • Trade</h3>
+                <h4>Within Your Campus</h4>
+
+                <p>
+                    CampusMarket is a student-focused marketplace designed to make
+                    buying and selling school items easier, safer, and more
+                    convenient — all within your campus community.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+
+            <div class="footer-content">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Campus Market Logo">
+                        <span>CampusMarket</span>
+                    </div>
+
+                    <p>Buy • Sell • Trade • Together</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+
+                    <a href="#page1">Home</a>
+                    <a href="#page2">Features</a>
+                    <a href="#page3">About</a>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-links">
+                    <h3>Support</h3>
+
+                    <a href="#">Help &amp; Contact</a>
+                    <a href="#">FAQs</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+
+                <!-- Social -->
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2025 CampusMarket. All rights reserved.</span>
+                <span>A student marketplace for a stronger campus community.</span>
+            </div>
+
+        </footer>
+
+    </section>
+    <script>
+        function goToPage(pageId) {
+            document.getElementById(pageId).scrollIntoView({
+            behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>

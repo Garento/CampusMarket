@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Market | Account</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/user.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation Bar -->
+    <section class="page" id="page1">
+        <header class="navbar">
+            <div class="brand">
+                <div class="brand-left">
+                        <!-- FILTER TOGGLE -->
+                    <button class="filter-toggle" id="filterToggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <img src="../images/logo.png" alt="Campus Market Logo" class="logo">
+                    <h1>CampusMarket</h1>   
+                </div>
+                <div class="header-actions">
+                    <div class="search-box2">
+                        <input type="text" placeholder="Search for products, categories, or keywords...">
+                        <button class="search-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="cart-account">
+                        <button class="cart" onclick="window.location.href='carts.html'">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cartCount" class="cart-badge"></span>
+                        </button>
+                        <button class="account" onclick="window.location.href='../pages/user.html'">
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <aside>
+        <!-- CHOICES -->
+        <div class="choices" id="choices"> 
+            <h1 class="categories">
+              My Account
+            </h1>
+            <button class="page active" data-page="products-page1" onclick="goToPage('products-page1')">
+                <h2 class="all-products">
+                    <i class="bx bx-user"></i>
+                    <span>Profile Information</span>
+                </h2>
+            </button>  
+            <button class="page" data-page="products-page2" onclick="goToPage('products-page2')">
+                <h2 class="books">
+                    <i class="bx bx-package"></i>
+                    <span>My Orders</span>
+                </h2>
+            </button>   
+            <button class="page" data-page="products-page3" onclick="goToPage('products-page3')">
+                <h2>
+                  <i class="bx bx-heart"></i>
+                  <span>Favorites</span>  
+                </h2>
+            </button>   
+            <button class="page" data-page="products-page4" onclick="goToPage('products-page4')">
+                <h2 class="calculators">
+                    <i class="bx bx-message-rounded"></i>
+                    <span>Message</span>
+                </h2>
+            </button>   
+            <button class="page" data-page="products-page5" onclick="goToPage('products-page5')">
+                <h2 class="bags"> 
+                    <i class="bx bx-package"></i>
+                    <span>My products</span>
+                </h2>
+            </button> 
+            
+            <hr>
+
+            <!-- STUDENT DEALS CARD -->
+            <div class="student-deals">
+                <div class="deal-icon">
+                    🎓
+                </div>
+
+                <h3>Student Deals</h3>
+
+                <p>
+                    Save more on
+                    school essentials!
+                </p>
+
+                <div class="discount">
+                    Up to 10% OFF
+                </div>
+
+                <small>
+                    💡 Study smarter, spend less!
+                </small>
+            </div>
+
+            <!-- HELP CARD -->
+            <div class="help-card" onclick="window.location.href='../pages/help.html'">
+                <div class="help-icon">
+                    🎧
+                </div>
+
+                <div>
+                    <h4>Need Help?</h4>
+                    <p>We're here for you!</p>
+                </div>
+
+                <span>
+                    →
+                </span>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+        <!-- PAGE 1 ALL -->
+        <section id="products-page1" class="product-section">
+            <div class="heading">
+              <a href="products.html" class="continue-shopping">
+                <i class='bx bx-left-arrow-alt'></i>
+                  Continue Shopping
+              </a>
+              
+              <br>
+              <h1>My Account</h1>
+              <p>Manage your profile, orders, and account settings.</p>
+            </div>
+
+            <!-- WELCOME -->
+            <section class="welcome">
+                <div class="avatar" id="avatar">JM</div>
+                <div class="welcome-text">
+                    <h2 id="welcomeName">Welcome back, Jm!</h2>
+                    <p id="welcomeEmail">alimpiadajm@email.com</p>
+                </div>
+
+                <button class="primary" id="editBtn">
+                    <i class="bx bx-edit"></i> 
+                    Edit Profile
+                </button>
+            </section>
+
+            <div class="layout">
+                <div class="main-column">
+                    <div class="panel" id="profile">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <img src="../images/profile.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="profile-details">
+                                <h2>Jm</h2>
+                                <p>
+                                    <i class="bx bx-buildings"></i>
+                                    PUP Sto. Tomas
+                                </p>
+                                <span class="verified">
+                                    <i class="bx bx-check-circle"></i>
+                                    Verified Student
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-title">
+                                <i class="bx bx-user"></i>
+                                <h3>Personal Information</h3>
+                            </div>
+
+                            <div class="info-row">
+                                <span>
+                                <i class="bx bx-user"></i>
+                                    Full Name
+                                </span>
+                                <p id="displayName">
+                                    Jan Marck Vincent E. Alimpiada
+                                </p>
+                            </div>
+
+                            <div class="info-row">
+                                <span>
+                                <i class="bx bx-envelope"></i>
+                                    Email Address
+                                </span>
+                                <p>
+                                    alimpiadajm@gmail.com
+                                </p>
+                            </div>
+
+                            <div class="info-row">
+                                <span>
+                                <i class="bx bx-id-card"></i>
+                                    Student ID
+                                </span>
+                                <p>
+                                    2025-6767
+                                </p>
+                            </div>
+
+                            <div class="info-row">
+                                <span>
+                                <i class="bx bx-link"></i>
+                                    Bio
+                                </span>
+                                <p>
+                                    Hi Im Jm, a 2nd year BSIT student at PUP Sto. Tomas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <div class="info-title">
+                                <i class="bx bx-buildings"></i>
+                                <h3>School Information</h3>
+                            </div>
+
+                            <div class="info-row">
+                                <span>
+                                <i class="bx bx-buildings"></i>
+                                School
+                                </span>
+
+                                <p>
+                                PUP Sto. Tomas
+                                </p>
+                            </div>
+
+                            <div class="info-row">
+                                <span>
+                                <i class="bx bx-map"></i>
+                                Home Address
+                                </span>
+
+                                <p>
+                                Tanauan City, Batangas
+                                </p>
+                            </div>
+
+                            <div class="info-row">
+                                <span>
+                                <i class="bx bx-book"></i>
+                                Program
+                                </span>
+
+                                <p>
+                                BSIT
+                                </p>
+                            </div>
+
+                            <div class="info-row">
+                                <span>
+                                <i class="bx bx-calendar"></i>
+                                Year Level
+                                </span>
+
+                                <p>
+                                2nd Year
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <hr class="hr">
+
+        <!-- PAGE 2 ORDERS -->
+        <section id="products-page2" class="product-section">
+            <div class="heading">
+                <h1>My Orders</h1>
+                <p>Track your order status.</p> <br>
+                <p class="all-orders">
+                    All Orders
+                </p>
+            </div>
+
+            <div class="panel">
+                <div class="order-section">
+                    <div class="no-order">
+                        <i class="bx bx-package"></i>
+                    </div>
+                    <h1>No orders yet</h1>
+                    <div class="browse-products">
+                        
+                        <a href="products.html">
+                            <strong>Browse Products</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 3 FAVORITES -->
+        <section id="products-page3" class="product-section" data-category="school supplies">
+            <div class="heading">
+                <h1>Favorites</h1>
+                <p>Your saved items.</p> <br><br>
+            </div>
+
+            <div class="panel">
+                <div class="order-section">
+                    <div class="no-order">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <h1>No favorites yet</h1>
+                    <div class="browse-products">
+                        
+                        <a href="products.html">
+                            <strong>Browse Products</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 4 MESSAGES -->
+        <section id="products-page4" class="product-section" data-category="calculators">
+            <div class="heading">
+              <h1>Messages</h1>
+              <p>Communicate with buyers and Sellers.</p> <br><br>
+            </div>
+
+            <div class="panel">
+                <div class="order-section">
+                    <div class="no-order">
+                        <i class="bx bx-message-rounded"></i>
+                    </div>
+                    <h1>No favorites yet</h1>
+                    <div class="browse-products">
+                        
+                        <a href="products.html">
+                            <strong>Browse Products</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="hr">
+
+        <!-- PAGE 5 MY PRODUCTS -->
+        <section id="products-page5" class="product-section">
+            <div class="heading">
+                <h1>My Products</h1>
+                <p>Manage the products your'e selling.</p> <br>
+                <p class="all-products">
+                    All Products
+                </p>
+            </div>
+
+            <div class="panel">
+                <div class="order-section">
+                    <div class="no-order">
+                        <i class="bx bx-package"></i>
+                    </div>
+                    <h1>No products yet</h1>
+                    <div class="browse-products">
+                        
+                        <a href="products.html">
+                            <strong>Sell Products</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/products.js"></script>
+</body>
+</html>

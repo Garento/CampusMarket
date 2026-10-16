@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Market | Products</title>
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../css/user.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+        <div class="brand-left">
+            <img src="../images/logo.png"
+                 alt="Campus Market Logo"
+                 class="logo">
+            <h1>CampusMarket</h1>
+        </div>
+
+        <div class="header-actions">
+            <form class="search-box2" id="searchForm">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for products, categories, or keywords..."
+                >
+                <button type="submit" class="search-button" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <div class="cart-account">
+                <button class="cart"
+                        type="button"
+                        onclick="window.location.href='carts.html'"
+                        aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cartCount" class="cart-badge">0</span>
+                </button>
+
+                <button class="account"
+                        type="button"
+                        onclick="window.location.href='account.html'"
+                        aria-label="My Account">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+  </header>
+  
+  <aside id="sidebar">
+    <h3 class="side-title">My Account</h3>
+    <nav>
+      <button class="nav-link active" data-panel="profile">
+        <i class="bx bx-user"></i>
+        <span>Profile Information</span>
+      </button>
+
+      <button class="nav-link" data-panel="orders">
+        <i class="bx bx-package"></i>
+        <span>My Orders</span>
+      </button>
+
+      <button class="nav-link" data-panel="addresses">
+        <i class="bx bx-map"></i>
+        <span>Favorites</span>
+      </button>
+
+      <button class="nav-link" data-panel="security">
+        <i class="bx bx-lock-alt"></i>
+        <span>Message</span>
+      </button>
+
+      <button class="nav-link" data-panel="preferences">
+        <i class="bx bx-cog"></i>
+        <span>My products</span>
+       </button>
+    </nav>
+    <hr>
+    <div class="deal">
+      <i class="bx bxs-graduation cap"></i>
+      <h3>Student Deals</h3>
+
+      <p>Save more on school essentials!</p>
+
+      <div class="discount">Up to 10% OFF</div>
+      <small>💡 Study smarter, spend less!</small>
+    </div>
+
+    <button class="help" id="helpBtn">
+      <i class="bx bx-headphone"></i>
+      <span>
+        <b>Need Help?</b>
+        <small>We're here for you!</small>
+      </span>
+      <i class="bx bx-right-arrow-alt"></i>
+    </button>
+
+    <button>
+      <i class="bx bx-headphone"></i>
+      <span>
+        Log Out
+      </span>
+    </button>
+  </aside>
+
+  <main>
+    <div class="heading">
+      <div>
+        <small class="crumb">CAMPUSMARKET / ACCOUNT</small>
+        <h1>My Account</h1>
+        <p>Manage your profile, orders, and account settings.</p>
+      </div>
+      
+      <span class="badge">
+        <i class="bx bx-shield-quarter"></i> 
+        Student Account
+      </span>
+    </div>
+
+    <section class="welcome">
+      <div class="avatar" id="avatar">JD</div>
+      <div class="welcome-text">
+        <h2 id="welcomeName">Welcome back, Juan!</h2>
+        <p id="welcomeEmail">juan.delacruz@email.com</p>
+      </div>
+
+      <button class="primary" id="editBtn">
+        <i class="bx bx-edit"></i> 
+        Edit Profile
+      </button>
+    </section>
+
+    <div class="layout">
+      <div class="main-column">
+        <section class="panel" id="profile">
+          <div class="panel-head">
+            <div>
+              <h2>Profile Information</h2>
+              <p>Update your personal details.</p>
+            </div>
+            <i class="bx bx-user-circle panel-icon"></i>
+          </div>
+
+          <form id="profileForm" class="form-grid">
+            <label>
+              Full Name
+              <input id="name" value="Juan Dela Cruz" required>
+            </label>
+
+            <label>
+              Email Address
+              <input id="email" type="email" value="juan.delacruz@email.com" required>
+            </label>
+
+            <label>
+              Student ID
+              <input id="studentId" value="2024-00001">
+            </label>
+
+            <label>
+              Contact Number
+              <input id="phone" type="tel" placeholder="Enter your contact number">
+            </label>
+
+            <label class="full">
+              Bio
+              <textarea id="bio" rows="3" placeholder="Tell us a little about yourself"></textarea>
+            </label>
+
+            <div class="form-actions full">
+              <button type="reset" class="secondary">
+                Cancel
+              </button>
+              
+              <button class="primary">
+                <i class="bx bx-save"></i> 
+                Save Changes
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel" id="orders" hidden>
+          <div class="panel-head"><div>
+            <h2>
+              My Orders
+            </h2>
+
+            <p>Review your recent purchases.</p>
+          </div>
+          <i class="bx bx-package panel-icon"></i>
+        </div>
+
+        <div class="empty">
+          <i class="bx bx-receipt"></i>
+          <h3>No orders yet</h3>
+          <p>Your purchases will appear here.</p>
+          <a class="primary button-link" href="products.html">Browse Products</a>
+        </div>
+      </section>
+      
+      <section class="panel" id="addresses" hidden>
+        <div class="panel-head">
+          <div>
+            <h2>My Addresses</h2>
+            <p>Manage your delivery information.</p>
+          </div>
+          <i class="bx bx-map panel-icon"></i>
+        </div>
+        <form id="addressForm" class="form-grid">
+          <label class="full">
+            Street / Building
+            <input placeholder="House number, street, building" required>
+          </label>
+          
+          <label>
+            City / Municipality
+            <input placeholder="City or municipality" required>
+          </label>
+          
+          <label>
+            Province
+            <input placeholder="Province" required>
+          </label>
+
+          <label class="full">
+            Delivery Notes
+            <textarea rows="3" placeholder="Landmarks or delivery instructions"></textarea>
+          </label>
+          
+          <div class="full form-actions">
+            <button class="primary">Save Address</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel" id="security" hidden>
+        <div class="panel-head">
+          <div>
+            <h2>Login &amp; Security</h2>
+            <p>Keep your account secure.</p>
+          </div>
+          <i class="bx bx-lock-alt panel-icon"></i>
+        </div>
+        <form id="passwordForm" class="form-grid one-col">
+          <label>
+            Current Password
+            <input type="password" required></label>
+            <label>
+              New Password
+              <input id="newPassword" type="password" minlength="8" required>
+            </label>
+
+            <label>
+              Confirm New Password
+              <input id="confirmPassword" type="password" minlength="8" required>
+            </label>
+            
+            <div class="form-actions">
+              <button class="primary">Update Password</button>
+            </div>
+          </form>
+          <p class="note">Demo only: connect this form to your authentication backend before using it for real passwords.</p>
+        </section>
+      <section class="panel" id="preferences" hidden>
+        <div class="panel-head"><div>
+          <h2>Preferences</h2>
+          <p>Choose your notification preferences.</p>
+        </div>
+        <i class="bx bx-cog panel-icon"></i>
+      </div>
+      
+      <label class="pref">
+        <span>
+          <b>Order updates</b>
+          <small>Notifications about your orders.</small>
+        </span>
+        
+        <input type="checkbox" checked></label>
+        <label class="pref">
+          <span>
+            <b>Student deals</b>
+            <small>Updates about discounts and offers.</small>
+          </span>
+          <input type="checkbox" checked>
+        </label>
+        
+        <label class="pref">
+          <span>
+            <b>Product recommendations</b>
+            <small>Suggestions based on your interests.</small>
+          </span>
+
+          <input type="checkbox" checked></label>
+          <button class="primary" id="savePrefs">Save Preferences</button>
+        </section>
+      </div>
+
+      <div class="right-column">
+        <section class="panel overview">
+          <h2>Account Overview</h2>
+          <div class="stat">
+            <span class="stat-icon blue">
+              <i class="bx bx-package"></i>
+            </span>
+
+            <span>
+              <b id="orderTotal">0</b>
+              <small>Total Orders</small>
+            </span>
+          </div>
+          
+          <div class="stat">
+            <span class="stat-icon green">
+              <i class="bx bx-check-circle"></i>
+            </span>
+
+            <span>
+              <b>Active</b>
+              <small>Account Status</small>
+            </span>
+          </div>
+
+          <div class="stat">
+            <span class="stat-icon purple">
+              <i class="bx bx-calendar"></i>
+            </span>
+            
+            <span>
+              <b>2026</b>
+              <small>Member Since</small>
+            </span>
+          </div>
+        </section>
+
+        <section class="panel security-card">
+          <span class="shield">
+            <i class="bx bx-shield-quarter"></i>
+          </span>
+          <h2>Your account, protected</h2>
+          <p>Keep your contact details updated and use a strong password.</p>
+          <button class="text-btn" data-open="security">
+            Review security 
+            <i class="bx bx-right-arrow-alt"></i>
+          </button>
+        </section>
+      </div>
+    </div>
+    <footer>© 2026 CampusMarket. Made for students.</footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="account.js"></script>
+</body>
+</html>

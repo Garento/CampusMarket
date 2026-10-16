@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/help.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="navbar">
+        <div class="brand">
+            <div class="brand-left">
+                <img src="../images/logo.png" alt="Campus Market Logo" class="logo">
+                <h1>CampusMarket</h1>   
+            </div>
+            <div class="header-actions">
+                <div class="search-box2">
+                    <input type="text" placeholder="Search for products, categories, or keywords...">
+                    <button class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="cart-account">
+                    <button class="cart" onclick="window.location.href='carts.html'">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cartCount" class="cart-badge"></span>
+                    </button>
+                    <button class="account">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= CONTENT ================= -->
+    <main class="container">
+        <section class="hero">
+            <div>
+                <h1>
+                    How can we help you?
+                </h1>
+
+                <p>
+                    Find answers about buying, selling,
+                    orders, and your CampusMarket account.
+                </p>
+            </div>
+
+            <div class="hero-icon">
+                🎧
+            </div>
+        </section>
+
+        <h2 class="title">
+            Help Categories
+        </h2>
+
+        <div class="help-grid">
+            <div class="help-box">
+                <i class='bx bx-shopping-bag'></i>
+
+                <h3>
+                    Buying Products
+                </h3>
+
+                <p>
+                    Learn how to browse products,
+                    add items to cart, and checkout.
+                </p>
+            </div>
+
+            <div class="help-box">
+                <i class='bx bx-package'></i>
+
+                <h3>
+                    Orders
+                </h3>
+
+                <p>
+                    Track your orders and check
+                    delivery status.
+                </p>
+            </div>
+
+            <div class="help-box">
+                <i class='bx bx-user'></i>
+
+                <h3>
+                    Account
+                </h3>
+
+                <p>
+                    Manage your profile,
+                    password, and settings.
+                </p>
+            </div>
+
+            <div class="help-box">
+                <i class='bx bx-credit-card'></i>
+
+                <h3>
+                    Payment
+                </h3>
+
+                <p>
+                    Learn about payment methods
+                    and transactions.
+                </p>
+            </div>  
+        <div>
+
+        <section class="contact">
+            <h2>
+                Still need help?
+            </h2>
+
+            <p>
+                Our support team is ready to assist you.
+            </p>
+
+            <div class="contact-card">
+            <i class='bx bx-message-dots'></i>
+
+                <div>
+                    <h3>
+                        Contact CampusMarket Support
+                    </h3>
+                    <p>
+                        Email: support@campusmarket.com
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/help.js"></script>
+</body>
+</html>

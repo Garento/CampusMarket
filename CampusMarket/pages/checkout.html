@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusMarket | Checkout</title>
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../css/checkout.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <header class="navbar">
+      <div class="brand">
+          <div class="brand-left">
+              <img src="../images/logo.png" alt="Campus Market Logo" class="logo">
+              <h1>CampusMarket</h1>   
+          </div>
+          <div class="header-actions">
+              <div class="search-box2">
+                  <input type="text" placeholder="Search for products, categories, or keywords...">
+                  <button class="search-button">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+              </div>
+              <div class="cart-account">
+                  <button class="cart" onclick="window.location.href='carts.html'">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span id="cartCount" class="cart-badge"></span>
+                  </button>
+                  <button class="account" onclick="window.location.href='user.html'">
+                      <i class="fa-regular fa-user"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <main class="checkout-wrap">
+    <div class="page-heading">
+      <div>
+        <a class="back-link" href="products.html">
+          <i class="bx bx-left-arrow-alt"></i> 
+          Continue shopping
+        </a>
+        <p class="eyebrow">ALMOST THERE</p>
+        <h1>Checkout</h1>
+        <p class="muted">Review your items and enter your delivery details.</p>
+      </div>
+      <div class="steps" aria-label="Checkout progress">
+        <span class="step active">
+          <b>1</b>
+          View
+        </span>
+        <span class="step-line"></span>
+
+        <span class="step active">
+          <b>2</b>
+          Payment</span>
+          <span class="step-line"></span>
+
+        <span class="step">
+          <b>3</b>
+          Delivery
+        </span>
+      </div>
+    </div>
+
+    <form id="checkoutForm" novalidate>
+      <div class="checkout-grid">
+        <div class="main-column">
+          <section class="panel">
+            <div class="section-heading">
+              <span class="heading-icon">
+                <i class="bx bx-map"></i>
+              </span>
+
+              <div>
+                <h2>Delivery information</h2>
+                <p>Where should we deliver your order?</p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <label>
+                Facebook Name
+                <input id="fullName" name="fullName" type="text" placeholder="e.g. Juan Dela Cruz" autocomplete="name" required>
+              </label>
+
+              <label>
+                Phone number
+                <input id="phone" name="phone" type="tel" placeholder="09XX XXX XXXX" autocomplete="tel" required>
+              </label>
+
+              <label class="full">
+                Email address 
+                <span class="optional">
+                  (optional)
+                </span>
+                <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+              </label>
+              
+              <label class="full">
+                Delivery address
+                <input id="address" name="address" type="text" placeholder="House no., street, barangay" autocomplete="street-address" required>
+              </label>
+
+              <label>
+                City / Municipality
+                <input id="city" name="city" type="text" placeholder="City or municipality" required>
+              </label>
+
+              <label>
+                Province
+                <input id="province" name="province" type="text" placeholder="Province" required>
+              </label>
+
+              <label>
+                Time
+                <input id="postal" name="postal" type="text" inputmode="numeric" placeholder="e.g. 10 am">
+              </label>
+              
+              <label>
+                Delivery notes
+                <input id="notes" name="notes" type="text" placeholder="Landmark, gate instructions, etc.">
+              </label>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="section-heading">
+              <span class="heading-icon">
+                <i class="bx bx-credit-card"></i>
+              </span>
+
+              <div>
+                <h2>Payment method</h2>
+                <p>Choose how you would like to pay.</p>
+              </div>
+            </div>
+            <div class="payment-options">
+              <label class="payment-option selected">
+                <input type="radio" name="paymentMethod" value="cod" checked>
+                <span class="payment-logo cod">
+                  <i class="bx bx-package"></i>
+                </span>
+                <span class="payment-copy">
+                  <strong>Cash on Delivery</strong>
+                  <small>Pay when your order arrives</small>
+                </span>
+                <span class="radio-mark"></span>
+              </label>
+
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="gcash">
+                <span class="payment-logo gcash">G</span>
+                <span class="payment-copy">
+                  <strong>GCash</strong>
+                  <small>Pay using your GCash wallet</small>
+                </span>
+
+                <span class="radio-mark"></span>
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <aside class="summary-column">
+          <section class="panel order-panel">
+            <div class="summary-title">
+              <h2>Your order</h2>
+              <span id="itemCount">0 items</span>
+            </div>
+
+            <div id="orderItems" class="order-items">
+            </div>
+            <div class="discount-row">
+              <label for="discountCode">Promo code</label>
+              <div class="promo-input">
+                <input id="discountCode" type="text" placeholder="Enter code">
+                <button type="button" id="applyPromo">
+                  Apply
+                </button>
+              </div>
+              <small id="promoMessage" aria-live="polite"></small>
+            </div>
+
+            <div class="totals">
+              <div>
+                <span>Subtotal</span>
+                <strong id="subtotal">₱0.00</strong>
+              </div>
+
+              <div>
+                <span>Delivery fee</span>
+                <strong id="deliveryFee">₱0.00</strong>
+              </div>
+
+              <div id="discountRow" hidden>
+                <span>Discount</span>
+                <strong id="discountAmount">−₱0.00</strong>
+              </div>
+              
+              <div class="grand-total">
+                <span>Total</span>
+                <strong id="grandTotal">₱0.00</strong>
+              </div>
+            </div>
+                
+            <button class="place-order" type="submit">
+              <i class="bx bx-lock-alt"></i> 
+              Place order 
+              <span id="buttonTotal">· ₱0.00</span>
+            </button>
+          </section>
+          <div class="help-card"><i class="bx bx-support"></i>
+            <div><strong>Need help?</strong>
+              <p>Contact CampusMarket support if you have questions about your order.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </form>
+    <footer class="footer">© 2026 CampusMarket · Made for students, by students.</footer>
+  </main>
+  </div>
+  <script src="../js/checkout.js"></script>
+</body>
+
+</html>

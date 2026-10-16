@@ -1,0 +1,580 @@
+/* Reset & Base Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #f8fafc; /* Subtle light background para lumitaw ang white hero box */
+    color: #334155;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Header & Navbar Layout */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 0 5px;
+    background-color: transparent;
+    margin-top: 20px;
+    z-index: 100;
+    /* Smooth Slide Down on Load */
+    animation: navSlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand .logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand h1 {
+    font-size: 1.50rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    letter-spacing: -0.5px;
+}
+
+/* Hero Box Layout */
+.hero-box {
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    padding: 40px 32px;
+    text-align: center;
+    
+    width: 90%;
+    max-width: 420px;          /* Sizing adjusted para maging sakto sa card UI */
+    margin: 20px auto;
+
+    /* Staggered Entrance Animation */
+    opacity: 0;
+    animation: cardFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+    transition: box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle Floating Hover Effect sa Card */
+.hero-box:hover {
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.07), 0 10px 12px -5px rgba(0, 0, 0, 0.02);
+}
+
+.hero-box h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.hero-box h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+/* Register Box Layout */
+.register-box {
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    padding: 32px 32px;
+    text-align: center;
+    
+    width: 90%;
+    max-width: 420px;          /* Sizing adjusted para maging sakto sa card UI */
+    margin: 20px auto;
+
+    /* Staggered Entrance Animation */
+    opacity: 0;
+    animation: cardFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+    transition: box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle Floating Hover Effect sa Card */
+.register-box:hover {
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.07), 0 10px 12px -5px rgba(0, 0, 0, 0.02);
+}
+
+.register-box h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.register-box h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+
+/* Input Box with Floating Label */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-box i:hover {
+    color: #4077ec; /* Nagiging asul kapag in-overan */
+}
+
+/* Regiter Input with Floating Label */
+.register-input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.register-input i:hover {
+    color: #4077ec; /* Nagiging asul kapag in-overan */
+}
+
+/* Province & School Select */
+#province,
+#school {
+    width: 100%;
+    height: 48px;
+    padding: 0 45px 0 12px;
+    border: 1px solid #cbd5e1;
+    outline: none;
+    color: #64748b;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    /* Remove browser default arrow */
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition: border-color 0.25s ease, box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Province & School Select */
+.select-box {
+    position: relative;
+    width: 100%;
+}
+
+/* Custom Down Arrow */
+.select-arrow {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 20px;
+    color: #64748b;
+
+    pointer-events: none;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #4077ec;
+}
+
+#province:focus,
+#school:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+input {
+    width: 100%;
+    padding: 10px 40px 10px 12px; /* top right bottom left */
+    border: 1px solid #cbd5e1;
+    outline: none;
+    color: #0f172a;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: border-color 0.25s ease, box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #64748b;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0 4px;
+}
+
+.create-label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    color: #64748b;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0 4px;
+}
+
+/* Floating Label Transition */
+input:focus + label,
+input:valid + label {
+    top: 0;
+    font-size: 12px;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Checkbox & Forgot Password Row Alignment */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.remember-forgot label {
+    position: static;
+    transform: none;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #334155;
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+}
+
+.remember-forgot input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.remember-forgot input[type="checkbox"]:active {
+    transform: scale(0.9);
+}
+
+.remember-forgot a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* Primary Button Styling & Micro-interactions */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.15);
+}
+
+/* Register section */
+.register {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.register a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.register a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+
+/* Log in Prompt Section */
+.login {
+    margin-top: 24px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.login a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.login a:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+
+/* ===================================================
+   KEYFRAME ANIMATIONS
+   =================================================== */
+
+@keyframes navSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN: LAPTOP, TABLET & PHONE
+   ======================================== */
+
+/* Laptop and Desktop */
+@media screen and (min-width: 1024px) {
+    .navbar {
+        padding: 15px 30px 0;
+        margin-top: 20px;
+    }
+
+    .hero-box,
+    .register-box {
+        max-width: 420px;
+        padding: 40px 32px;
+        margin: 30px auto;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px 0;
+        margin-top: 10px;
+    }
+
+    .brand .logo {
+        height: 34px;
+    }
+
+    .brand h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-box,
+    .register-box {
+        width: 90%;
+        max-width: 420px;
+        padding: 30px 24px;
+        margin: 20px auto;
+    }
+
+    .hero-box h1,
+    .register-box h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-box h3,
+    .register-box h3 {
+        font-size: 0.85rem;
+        margin-bottom: 24px;
+    }
+}
+
+/* Mobile Phone */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .navbar {
+        justify-content: center;
+        padding: 12px 15px 0;
+        margin-top: 5px;
+    }
+
+    .brand {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .brand .logo {
+        height: 30px;
+    }
+
+    .brand h1 {
+        font-size: 1.15rem;
+        letter-spacing: -0.5px;
+    }
+
+    .hero-box,
+    .register-box {
+        width: calc(100% - 30px);
+        max-width: 420px;
+        padding: 28px 20px;
+        margin: 20px auto;
+        border-radius: 14px;
+    }
+
+    .hero-box h1,
+    .register-box h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-box h3,
+    .register-box h3 {
+        font-size: 0.82rem;
+        margin-bottom: 22px;
+    }
+
+    .input-box,
+    .register-input {
+        margin-bottom: 18px;
+    }
+
+    input,
+    #province,
+    #school {
+        min-height: 46px;
+        font-size: 16px;
+    }
+
+    .select-arrow {
+        right: 14px;
+    }
+
+    .toggle-password {
+        right: 12px;
+    }
+
+    .remember-forgot {
+        gap: 10px;
+        font-size: 0.78rem;
+        flex-wrap: wrap;
+    }
+
+    .remember-forgot label {
+        gap: 6px;
+    }
+
+    .remember-forgot input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        min-height: auto;
+    }
+
+    .btn {
+        min-height: 46px;
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .register,
+    .login {
+        font-size: 0.82rem;
+        line-height: 1.7;
+    }
+}
+
+/* Very Small Phones */
+@media screen and (max-width: 360px) {
+    .brand .logo {
+        height: 26px;
+    }
+
+    .brand h1 {
+        font-size: 1rem;
+    }
+
+    .hero-box,
+    .register-box {
+        width: calc(100% - 20px);
+        padding: 24px 15px;
+    }
+
+    .hero-box h1,
+    .register-box h1 {
+        font-size: 1.25rem;
+    }
+
+    .remember-forgot {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
